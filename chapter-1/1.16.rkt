@@ -1,3 +1,5 @@
+#lang racket
+
 ; Exercise 1.16
 ; Design a procedure that evolves an iterative
 ; exponentiation process that uses successive squaring
@@ -11,13 +13,13 @@
 
 (define (iter b n acc)
   (if (= n 1)
-    acc
-    (if (even? n)
-      (iter
-        b
-        (/ n 2)
-        (square acc))
-      (iter
-        b
-        (- n 1)
-        (* acc b)))))
+      acc
+      (if (even? n)
+          (iter
+           b
+           (/ n 2)
+           (square acc))
+          (iter
+           b
+           (- n 1)
+           (* acc b)))))
