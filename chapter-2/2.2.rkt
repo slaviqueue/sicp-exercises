@@ -59,4 +59,4 @@
    (make-point 3 1)
    (make-point 3 -4)))
 
-(print (midpoint-segment test-segment)) ; 3, -1.5
+(print-point (midpoint-segment test-segment)) ; (3,-3/2)
