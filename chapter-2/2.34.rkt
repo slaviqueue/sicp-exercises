@@ -16,11 +16,7 @@
 ; rule. Assume that the coefficients of the polynomial are arranged in a sequence, from a[0] through
 ; a[n].
 
-(define (accumulate op initial sequence)
-  (if (null? sequence)
-      initial
-      (op (car sequence)
-          (accumulate op initial (cdr sequence)))))
+(require "./lib/accumulate.rkt")
 
 (define (horner-eval x coefficient-sequence)
   (accumulate (lambda (this-coeff higher-terms) (+ this-coeff (* x higher-terms)))

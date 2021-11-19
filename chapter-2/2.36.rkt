@@ -1,10 +1,6 @@
 #lang racket
 
-(define (accumulate op initial sequence)
-  (if (null? sequence)
-      initial
-      (op (car sequence)
-          (accumulate op initial (cdr sequence)))))
+(require "./lib/accumulate.rkt")
 
 (define (accumulate-n op init seqs)
   (println seqs)

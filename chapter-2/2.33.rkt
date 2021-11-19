@@ -3,11 +3,7 @@
 ; Exercise 2.33: Fill in the missing expressions to complete the following definitions of some basic
 ; list-manipulation operations as accumulations:
 
-(define (accumulate op initial sequence)
-  (if (null? sequence)
-      initial
-      (op (car sequence)
-          (accumulate op initial (cdr sequence)))))
+(require "./lib/accumulate.rkt")
 
 (define (map p sequence)
   (accumulate (lambda (x y) (cons (p x) y)) null sequence))
